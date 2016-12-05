@@ -81,6 +81,9 @@ public class Main {
 		News news1 = new News("Welcome to the tolo[SPORT]","...",category1, "Tesla", "HELLO",  new Date(), new Date());
 		News news2 =new News("Today is raining with blood[WEATHER]","...",category2, "Hitler", "ZDOGA",  new Date(), new Date());
 		
+		e0.subscribeDomain(category0);
+		e0.subscribeDomain(category1);
+		e0.subscribeDomain(category2);
 		e0.newsAppeared(news0);
 		e0.newsAppeared(news1);
 		e0.newsAppeared(news2);
@@ -92,7 +95,8 @@ public class Main {
 		e0.newsDeleted(news1);
 		e0.newsDeleted(news0);
 		
-		
+
+		r0.newsRead(news2); // If I don't tell to editor that I read a certain news he does not know about that 
 		r0.newsRead(news1);
 		r1.newsRead(news1);
 		r0.newsRead(news0);
